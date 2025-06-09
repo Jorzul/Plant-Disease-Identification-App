@@ -1,10 +1,13 @@
 import json
+from pathlib import Path
 # Configuration file
 # Here we have all the static data
 
 MODEL_PATH = 'C:/Users/User/FruitsCCNs/Application/PlantsLeaves_classify.keras'
 IMG_HEIGHT = 180
 IMG_WIDTH = 180
+USER_DATA_FILE = Path("users.json")
+FEEDBACK_DATA_FILE = Path("feedbacks.json")
 
 # A list of all possible disease categories the model can predict.
 DATA_CATEGORY = [
