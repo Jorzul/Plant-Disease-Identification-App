@@ -1,0 +1,16 @@
+{
+    "Ionut Jorza": {
+        "Date": "2025-06-09 22:30:25",
+        "Predicted_Class": "Pepper,_bell___Bacterial_spot",
+        "Confidence": "4.72%",
+        "Satisfied": "Yes",
+        "Comment": "Very good application! We love to see it!"
+    },
+    "Jrz": {
+        "Date": "2025-06-09 22:32:52",
+        "Predicted_Class": "Strawberry___Leaf_scorch",
+        "Confidence": "6.68%",
+        "Satisfied": "Yes",
+        "Comment": "GG very nice app!"
+    }
+}

@@ -1,11 +1,10 @@
-# app.py
-
 import streamlit as st
 import pandas as pd
 import config
 import utils
 import user_management as um
 import re
+import datetime
 import time
 import random
 
@@ -33,8 +32,7 @@ if not st.session_state.logged_in:
 
             if submitted:
                 with st.spinner("Logging in..."): # Spinner for login
-                    # Simulate login time
-                    time.sleep(random.uniform(0.1, 1.5)) # Remove in production or adjust as needed
+                    time.sleep(random.uniform(0.1, 1.5))
                     user = um.login_user(email, password)
                     if user:
                         st.session_state.logged_in = True
@@ -55,7 +53,6 @@ if not st.session_state.logged_in:
 
             if submitted:
                 with st.spinner("Checking..."): # Spinner for login
-                    # Simulate login time
                     time.sleep(random.uniform(0.1, 1.5))
                     if password != confirm_password:
                         st.error("Passwords do not match.")
@@ -92,7 +89,7 @@ if st.session_state.logged_in:
 
     if uploaded_file is not None and model is not None:
         with st.spinner("Analyzing image and predicting disease..."):
-            time.sleep(random.uniform(0.1, 1.5)) # Simulate processing
+            time.sleep(random.uniform(0.1, 1.5))
             image, top_class, top_score, top_5_classes, top_5_scores = utils.process_and_predict(
             uploaded_file, model, config.DATA_CATEGORY, config.IMG_WIDTH, config.IMG_HEIGHT
             )
@@ -132,7 +129,7 @@ if st.session_state.logged_in:
         })
 
         # Sort for better visual clarity
-        chart_data = chart_data.sort_values(by='Confidence')
+        chart_data = chart_data.sort_values(by='Confidence', ascending=False)
         chart_data.index += 1
 
         # Create layout with expander
@@ -156,9 +153,9 @@ if st.session_state.logged_in:
 
         if yes_button or no_button:
             with st.spinner("Submitting..."):
-                time.sleep(random.uniform(0.2, 1.5)) # Spinner for login
+                time.sleep(random.uniform(0.2, 1.5))
                 satisfaction = "Yes" if yes_button else "No"
-                if um.save_feedback(st.session_state.user_name, time.time(), top_class, f"{top_score:.2f}%", satisfaction, feedback_text):
+                if um.save_feedback(st.session_state.user_name, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), top_class, f"{top_score:.2f}%", satisfaction, feedback_text):
                     st.success("Thank you for your feedback!")
                 else:
                     st.error('You already submitted a feedback.')

@@ -1,5 +1,3 @@
-# utils.py
-
 import tensorflow as tf
 import streamlit as st
 import numpy as np

@@ -1,9 +1,8 @@
-# user_management.py
-
 import json
 from pathlib import Path
 import hashlib
 import config
+
 USER_DATA_FILE = config.USER_DATA_FILE
 FEEDBACK_DATA_FILE = config.FEEDBACK_DATA_FILE
 

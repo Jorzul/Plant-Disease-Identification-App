@@ -1,7 +1,5 @@
 import json
 from pathlib import Path
-# Configuration file
-# Here we have all the static data
 
 MODEL_PATH = 'C:/Users/User/FruitsCCNs/Application/PlantsLeaves_classify.keras'
 IMG_HEIGHT = 180
