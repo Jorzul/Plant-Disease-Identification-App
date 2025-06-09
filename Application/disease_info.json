@@ -1,0 +1,72 @@
+{
+  "Apple___Apple_scab": {
+    "description": "A common fungal disease that affects apple and crabapple trees. It appears as dull green or brown spots on leaves, fruit, and twigs. Leaves may become twisted and puckered.",
+    "treatment": "Management includes planting resistant varieties, proper sanitation by removing fallen leaves and fruit, and applying fungicides from bud-break through the growing season. Ensure good air circulation through pruning.",
+    "link": "https://www.google.com/search?q=Apple scab"
+  },
+  "Apple___Black_rot": {
+    "description": "A fungal disease that causes leaf spots, fruit rot, and cankers on branches. Leaf spots are often circular with a purplish border, and infected fruit turns black and mummifies.",
+    "treatment": "Prune out and destroy cankered branches and mummified fruit. Apply fungicides on a schedule, especially during wet weather. Proper sanitation is crucial to reduce fungal spores.",
+    "link": "https://www.google.com/search?q=Apple___Black_rot"
+  },
+  "Apple___Cedar_apple_rust": {
+    "description": "A fungal disease that requires both an apple or crabapple tree and a cedar or juniper tree to complete its life cycle. It causes bright orange or yellow spots on apple leaves and can affect the fruit.",
+    "treatment": "The most effective method is to remove nearby cedar/juniper trees. If not possible, fungicides can be applied to the apple trees starting at bud break. Resistant apple varieties are available.",
+    "link": "https://www.google.com/search?q=Apple___Cedar_apple_rust"
+  },
+  "Apple___healthy": {
+    "description": "The leaf shows no visible signs of disease or pest infestation. It has a uniform color and an intact shape, indicating good plant health.",
+    "treatment": "Maintain health through proper watering, balanced fertilization, adequate sunlight, and good air circulation. Regularly inspect for early signs of pests or diseases.",
+    "link": "https://www.google.com/search?q=Apple___healthy"
+  },
+  "Background_without_leaves": {
+    "description": "The image does not contain a plant leaf or the leaf is not clearly visible. The model could not identify a plant subject for diagnosis.",
+    "treatment": "Please upload a clear image of a single plant leaf, ensuring it is well-lit and in focus against a neutral background.",
+    "link": "https://www.google.com/search?q=Background_without_leaves"
+  },
+  "Blueberry___healthy": {
+    "description": "The blueberry leaf appears healthy, with no spots, discoloration, or damage. This indicates the plant is likely not suffering from common foliar diseases.",
+    "treatment": "To keep plants healthy, ensure acidic soil, provide consistent moisture, use appropriate fertilizers for acid-loving plants, and prune annually to encourage good air flow.",
+    "link": "https://www.google.com/search?q=Blueberry___healthy"
+  },
+  "Cherry___Powdery_mildew": {
+    "description": "A fungal disease that appears as white, powdery patches on the surfaces of leaves and young shoots. It can cause leaf distortion, curling, and premature drop.",
+    "treatment": "Increase air circulation through pruning. Avoid overhead watering. Apply horticultural oils, sulfur-based fungicides, or other registered fungicides at the first sign of infection.",
+    "link": "https://www.google.com/search?q=Cherry___Powdery_mildew"
+  },
+  "Cherry___healthy": {
+    "description": "The cherry leaf shows no signs of disease or stress. The color is vibrant and uniform, and the leaf structure is sound.",
+    "treatment": "Maintain plant health by ensuring well-drained soil, providing full sun exposure, watering regularly during dry periods, and applying a balanced fertilizer in the spring.",
+    "link": "https://www.google.com/search?q=Cherry___healthy"
+  },
+  "Corn___Cercospora_leaf_spot Gray_leaf_spot": {
+    "description": "Gray leaf spot is a fungal disease characterized by long, narrow, rectangular lesions on the corn leaves that are typically light tan or gray and bordered by veins.",
+    "treatment": "Management strategies include planting resistant corn hybrids, crop rotation with non-host crops, and tillage to bury infected residue. Fungicides may be effective if applied early.",
+    "link": "https://www.google.com/search?q=Corn___Cercospora_leaf_spot Gray_leaf_spot"
+  },
+  "Corn___Common_rust": {
+    "description": "A fungal disease that produces small, cinnamon-brown, powdery pustules on both the upper and lower surfaces of corn leaves. Lesions are typically circular to elongated.",
+    "treatment": "Most modern corn hybrids have good resistance, and treatment is often unnecessary. In severe cases on susceptible hybrids, a foliar fungicide application can be effective.",
+    "link": "https://www.google.com/search?q=Corn___Common_rust"
+  },
+  "Corn___Northern_Leaf_Blight": {
+    "description": "A fungal disease that causes long, elliptical, cigar-shaped, tan or grayish lesions on corn leaves. It typically starts on lower leaves and moves up the plant.",
+    "treatment": "Use resistant hybrids, practice crop rotation, and manage residue through tillage. Foliar fungicides can be beneficial, especially if applied early in the disease's development.",
+    "link": "https://www.google.com/search?q=Corn___Northern_Leaf_Blight"
+  },
+  "Corn___healthy": {
+    "description": "The corn leaf appears vigorous and free from the characteristic lesions of common diseases. The color is a healthy green, indicating good nutrition and health.",
+    "treatment": "Maintain health by selecting strong hybrids, ensuring proper plant spacing and nutrition, managing water effectively, and scouting regularly for pests and diseases.",
+    "link": "https://www.google.com/search?q=Corn___healthy"
+  },
+  "Grape___Black_rot": {
+    "description": "A serious fungal disease of grapes. It causes small, brownish, circular spots on leaves. On fruits, it starts as a small whitish spot that quickly engulfs the berry, turning it black and mummified.",
+    "treatment": "Sanitation is key: remove and destroy all infected plant material (canes, leaves, mummified fruit). Apply fungicides in a preventative spray program, starting when new shoots are 2-4 inches long.",
+    "link": "https://www.google.com/search?q=Grape___Black_rot"
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "description": "A complex fungal trunk disease that can cause sudden wilting (apoplexy) or chronic symptoms. Chronic symptoms include small, dark spots on grape berries ('measles') and tiger-stripe patterns on leaves.",
+    "treatment": "There is no cure for Esca. Management focuses on prevention, such as protecting pruning wounds. Infected or dead arms of the grapevine should be pruned out well below the symptomatic area.",
+    "link": "https://www.google.com/search?q=Grape___Esca_(Black_Measles)"
+  }
+}
