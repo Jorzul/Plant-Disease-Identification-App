@@ -1,3 +1,5 @@
+# app.py (Modified)
+
 import streamlit as st
 import pandas as pd
 import config
@@ -7,6 +9,7 @@ import re
 import datetime
 import time
 import random
+import main_screen
 
 # --- App Layout ---
 st.set_page_config(page_title="Plant Disease Identifier", layout="centered")
@@ -15,14 +18,25 @@ st.set_page_config(page_title="Plant Disease Identifier", layout="centered")
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
     st.session_state.user_name = ""
+if 'active_tab' not in st.session_state: # New: Initialize active_tab
+    st.session_state.active_tab = "Home"
 
 st.title('Plant Disease Identification App')
 
+# Function to change tab
+def set_active_tab(tab_name):
+    st.session_state.active_tab = tab_name
+
 # --- Page Navigation ---
 if not st.session_state.logged_in:
-    tab1, tab2 = st.tabs(["Login", "Register"])
+    # Pass the active tab and the setter function to st.tabs
+    tab1, tab2, tab3 = st.tabs(["Home", "Login", "Register"])
 
     with tab1:
+        # Render the main home screen, passing the tab setter
+        main_screen.render_main_screen(set_active_tab)
+
+    with tab2:
         # Login form content here
         st.subheader("Login to your account")
         with st.form("login_form_tab"):
@@ -41,7 +55,7 @@ if not st.session_state.logged_in:
                     else:
                         st.error("Invalid email or password.")
 
-    with tab2:
+    with tab3:
         # Register form content here
         st.subheader("Create a new account")
         with st.form("register_form_tab"):
