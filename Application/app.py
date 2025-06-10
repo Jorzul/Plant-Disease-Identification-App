@@ -1,5 +1,3 @@
-# app.py (Modified)
-
 import streamlit as st
 import pandas as pd
 import config
@@ -18,34 +16,58 @@ st.set_page_config(page_title="Plant Disease Identifier", layout="centered")
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
     st.session_state.user_name = ""
-if 'active_tab' not in st.session_state: # New: Initialize active_tab
-    st.session_state.active_tab = "Home"
+if 'active_page' not in st.session_state:  # Changed from active_tab to active_page
+    st.session_state.active_page = "Home"
 
-st.title('Plant Disease Identification App')
+st.markdown("""
+    <style>
+            .title {
+                text-align: center;
+                font-size: 5em;
+                color: #4CAF50;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            div[data-testid="column"] {
+            text-align: center;
+            }
+            .st-emotion-cache-8atqhb {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    </style>""", unsafe_allow_html=True)
+st.markdown('<div class="title">LeafSnap</div>', unsafe_allow_html=True)
 
-# Function to change tab
-def set_active_tab(tab_name):
-    st.session_state.active_tab = tab_name
+# Function to change page
+def set_active_page(page_name):
+    st.session_state.active_page = page_name
 
-# --- Page Navigation ---
 if not st.session_state.logged_in:
-    # Pass the active tab and the setter function to st.tabs
-    tab1, tab2, tab3 = st.tabs(["Home", "Login", "Register"])
-
-    with tab1:
-        # Render the main home screen, passing the tab setter
-        main_screen.render_main_screen(set_active_tab)
-
-    with tab2:
+    # Create centered navigation buttons
+    col1, col2, col3 = st.columns([1,1,1])
+    with col1:
+        st.button("Home", on_click=set_active_page, args=("Home",))
+    with col2:
+        st.button("Login", on_click=set_active_page, args=("Login",))
+    with col3:
+        st.button("Register", on_click=set_active_page, args=("Register",))
+    
+    st.markdown("---")  # Add a divider
+    
+    # Render the appropriate page based on selection
+    if st.session_state.active_page == "Home":
+        main_screen.render_main_screen(set_active_page)
+    elif st.session_state.active_page == "Login":
         # Login form content here
         st.subheader("Login to your account")
-        with st.form("login_form_tab"):
-            email = st.text_input("Email", key="login_email_tab")
-            password = st.text_input("Password", type="password", key="login_password_tab")
+        with st.form("login_form"):
+            email = st.text_input("Email", key="login_email")
+            password = st.text_input("Password", type="password", key="login_password")
             submitted = st.form_submit_button("Login")
 
             if submitted:
-                with st.spinner("Logging in..."): # Spinner for login
+                with st.spinner("Logging in..."):  # Spinner for login
                     time.sleep(random.uniform(0.1, 1.5))
                     user = um.login_user(email, password)
                     if user:
@@ -55,18 +77,18 @@ if not st.session_state.logged_in:
                     else:
                         st.error("Invalid email or password.")
 
-    with tab3:
+    elif st.session_state.active_page == "Register":
         # Register form content here
         st.subheader("Create a new account")
-        with st.form("register_form_tab"):
-            name = st.text_input("Name", key="register_name_tab")
-            email = st.text_input("Email", key="register_email_tab")
-            password = st.text_input("Password", type="password", key="register_password_tab")
-            confirm_password = st.text_input("Confirm Password", type="password", key="register_confirm_password_tab")
+        with st.form("register_form"):
+            name = st.text_input("Name", key="register_name")
+            email = st.text_input("Email", key="register_email")
+            password = st.text_input("Password", type="password", key="register_password")
+            confirm_password = st.text_input("Confirm Password", type="password", key="register_confirm_password")
             submitted = st.form_submit_button("Register")
 
             if submitted:
-                with st.spinner("Checking..."): # Spinner for login
+                with st.spinner("Checking..."):  # Spinner for login
                     time.sleep(random.uniform(0.1, 1.5))
                     if password != confirm_password:
                         st.error("Passwords do not match.")
@@ -79,11 +101,20 @@ if not st.session_state.logged_in:
                     else:
                         um.register_user(name, email, password)
                         st.success("Registration successful! Please login.")
+                        set_active_page("Login")  # Switch to login page after registration
 
 if st.session_state.logged_in:
     # --- Main App for Logged-in Users ---
     st.sidebar.header(f"Welcome, {st.session_state.user_name}!")
     st.sidebar.text('Thanks for using the Application!')
+    
+    # --- Text ---
+    st.sidebar.subheader("How to use")
+    with st.sidebar.expander("Show instructions"):
+        st.sidebar.markdown("First step: Take a photo of the plant\'s leaf that you want to review.")
+        st.sidebar.markdown("Second step: Choose the photo and wait for the analysis.")
+        st.sidebar.markdown("Check the treatment or search the web for further information.")
+
     if st.sidebar.button("Logout"):
         st.session_state.logged_in = False
         st.session_state.user_name = ""
@@ -91,12 +122,6 @@ if st.session_state.logged_in:
 
     # --- Model Loading ---
     model = utils.load_model(config.MODEL_PATH)
-
-    # --- Text ---
-    st.subheader('How to use the application')
-    st.text('First step: Take a photo of the plant\'s leaf that you want to review.')
-    st.text('Second step: Choose the photo and wait for the analysis.')
-    st.text('Check the treatment or search the web for further information.')
 
     # --- File Uploader and Main Logic ---
     uploaded_file = st.file_uploader("Choose a leaf image...", type=["jpg", "jpeg", "png"])

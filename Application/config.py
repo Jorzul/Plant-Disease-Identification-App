@@ -9,18 +9,15 @@ FEEDBACK_DATA_FILE = Path("feedbacks.json")
 
 # A list of all possible disease categories the model can predict.
 DATA_CATEGORY = [
-    'Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_rust', 'Apple___healthy',
-    'Background_without_leaves', 'Blueberry___healthy', 'Cherry___Powdery_mildew', 'Cherry___healthy',
-    'Corn___Cercospora_leaf_spot Gray_leaf_spot', 'Corn___Common_rust', 'Corn___Northern_Leaf_Blight',
-    'Corn___healthy', 'Grape___Black_rot', 'Grape___Esca_(Black_Measles)',
-    'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Grape___healthy', 'Orange___Haunglongbing_(Citrus_greening)',
-    'Peach___Bacterial_spot', 'Peach___healthy', 'Pepper,_bell___Bacterial_spot', 'Pepper,_bell___healthy',
-    'Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy', 'Raspberry___healthy',
-    'Soybean___healthy', 'Squash___Powdery_mildew', 'Strawberry___Leaf_scorch', 'Strawberry___healthy',
-    'Tomato___Bacterial_spot', 'Tomato___Early_blight', 'Tomato___Late_blight', 'Tomato___Leaf_Mold',
-    'Tomato___Septoria_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 'Tomato___Target_Spot',
-    'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Tomato___Tomato_mosaic_virus', 'Tomato___healthy'
-]
+        'Apple Black Rot', 'Apple Cedar Rust', 'Apple Scab', 'Cherry Powdery Mildew', 'Corn Cercospora Leaf Spot', 
+        'Corn Common Rust', 'Corn Northern Leaf Blight', 'Grape Black Measles', 'Grape Black Rot', 'Grape Leaf Blight', 
+        'Healthy Apple', 'Healthy Blueberry', 'Healthy Cherry', 'Healthy Corn', 'Healthy Grape', 'Healthy Peach', 'Healthy Pepper Bell', 
+        'Healthy Potato', 'Healthy Raspberry', 'Healthy Soybean', 'Healthy Strawberry', 'Healthy Tomato', 'No Leaf Image', 
+        'Orange Haunglongbing (Citrus Greening)', 'Peach Bacterial Spot', 'Pepper Bell Bacterial Spot', 'Potato Early Blight', 
+        'Potato Late Blight', 'Squash Powdery Mildew', 'Strawberry Leaf Scorch', 'Tomato Bacterial Spot', 'Tomato Early Blight', 
+        'Tomato Late Blight', 'Tomato Leaf Mold', 'Tomato Mosaic Virus', 'Tomato Septoria Leaf Spot', 'Tomato Spider Mites', 
+        'Tomato Target Spot', 'Tomato Yellow Leaf Curl Virus'
+    ]
 
 with open('C:/Users/User/FruitsCCNs/Application/disease_info.json', 'r') as file:
     DISEASE_INFO = json.load(file)

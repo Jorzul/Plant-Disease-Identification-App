@@ -24,6 +24,7 @@ def render_main_screen(set_active_tab_callback): # Added callback argument
         }
         .hero-title {
             font-size: 2.5rem;
+            text-align: center;
             font-weight: 800;
             color: #F9FAFB; /* Off-White */
         }
@@ -36,46 +37,6 @@ def render_main_screen(set_active_tab_callback): # Added callback argument
             max-width: 600px;
             margin: 1rem auto 0;
         }
-
-        /* Buttons in Hero Section */
-        .hero-buttons {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem; /* Space between buttons */
-        }
-
-        .hero-button {
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-size: 1.125rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none; /* For potential links */
-            display: inline-block; /* For proper padding and margin */
-        }
-
-        .hero-button.primary {
-            background-color: #22c55e; /* Bright Green */
-            color: #111827; /* Dark Blue-Gray */
-            border: none;
-        }
-
-        .hero-button.primary:hover {
-            background-color: #1a9c4b; /* Darker Green on hover */
-        }
-
-        .hero-button.secondary {
-            background-color: #4B5563; /* Darker Gray */
-            color: #F9FAFB; /* Off-White */
-            border: 1px solid #6B7280; /* Gray border */
-        }
-
-        .hero-button.secondary:hover {
-            background-color: #6B7280; /* Lighter Gray on hover */
-        }
-
 
         /* Section styling */
         .section {
@@ -213,21 +174,9 @@ def render_main_screen(set_active_tab_callback): # Added callback argument
             <span>Identify Plant Diseases</span>
             <span class="highlight">Instantly.</span>
         </h1>
-        <p class="hero-subtitle">
+        <p>
             Snap a photo of a plant leaf, and our AI will analyze it to detect diseases and provide you with treatment information.
         </p>
-        <div class="hero-buttons">
-            <button class="hero-button primary" onclick="
-                const urlParams = new URLSearchParams(window.location.search);
-                urlParams.set('tab', 'Login');
-                window.location.search = urlParams.toString();
-            ">Log In</button>
-            <button class="hero-button secondary" onclick="
-                const urlParams = new URLSearchParams(window.location.search);
-                urlParams.set('tab', 'Register');
-                window.location.search = urlParams.toString();
-            ">Get Started</button>
-        </div>
     </div>
     """, unsafe_allow_html=True)
 
