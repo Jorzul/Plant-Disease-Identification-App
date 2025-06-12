@@ -1,23 +1,35 @@
 import json
 from pathlib import Path
 
-MODEL_PATH = 'C:/Users/User/FruitsCCNs/Application/PlantsLeaves_classify.keras'
+# --- Model Configuration ---
+# A dictionary to hold the names and paths of the available models.
+# The keys are the names that will be displayed to the user.
+# The values are the file paths to the corresponding .keras models.
+MODEL_PATHS = {
+    "LeafSnap": 'C:/Users/User/FruitsCCNs/models/PlantsLeaves_classify_2.keras',
+    "MobileNetV2": 'C:/Users/User/OneDrive/Documents/GitHub/Plant-Disease-Identification-App/models/PlantsLeaves_classify_MobileNetV2.keras',
+    "EfficientNetV2": 'C:/Users/User/OneDrive/Documents/GitHub/Plant-Disease-Identification-App/models/PlantsLeaves_classify_EfficientNetV2.keras'
+}
+
+# --- Image Dimensions ---
 IMG_HEIGHT = 180
 IMG_WIDTH = 180
+
+# --- Data Files ---
 USER_DATA_FILE = Path("users.json")
 FEEDBACK_DATA_FILE = Path("feedbacks.json")
 
-# A list of all possible disease categories the model can predict.
-DATA_CATEGORY = [
-        'Apple Black Rot', 'Apple Cedar Rust', 'Apple Scab', 'Cherry Powdery Mildew', 'Corn Cercospora Leaf Spot', 
-        'Corn Common Rust', 'Corn Northern Leaf Blight', 'Grape Black Measles', 'Grape Black Rot', 'Grape Leaf Blight', 
-        'Healthy Apple', 'Healthy Blueberry', 'Healthy Cherry', 'Healthy Corn', 'Healthy Grape', 'Healthy Peach', 'Healthy Pepper Bell', 
-        'Healthy Potato', 'Healthy Raspberry', 'Healthy Soybean', 'Healthy Strawberry', 'Healthy Tomato', 'No Leaf Image', 
-        'Orange Haunglongbing (Citrus Greening)', 'Peach Bacterial Spot', 'Pepper Bell Bacterial Spot', 'Potato Early Blight', 
-        'Potato Late Blight', 'Squash Powdery Mildew', 'Strawberry Leaf Scorch', 'Tomato Bacterial Spot', 'Tomato Early Blight', 
-        'Tomato Late Blight', 'Tomato Leaf Mold', 'Tomato Mosaic Virus', 'Tomato Septoria Leaf Spot', 'Tomato Spider Mites', 
-        'Tomato Target Spot', 'Tomato Yellow Leaf Curl Virus'
-    ]
+# Load the categories from the JSON file
+try:
+    with open('C:/Users/User/OneDrive/Documents/GitHub/Plant-Disease-Identification-App/Application/disease_categories.json', 'r') as file:
+        DATA_CATEGORY = json.load(file)
+except FileNotFoundError:
+    DATA_CATEGORY = [] # If the file is not found, use an empty list.
 
-with open('C:/Users/User/FruitsCCNs/Application/disease_info.json', 'r') as file:
-    DISEASE_INFO = json.load(file)
+# Load disease information from a JSON file.
+try:
+    with open('C:/Users/User/OneDrive/Documents/GitHub/Plant-Disease-Identification-App/Application/disease_info.json', 'r') as file:
+        DISEASE_INFO = json.load(file)
+except FileNotFoundError:
+    DISEASE_INFO = {} # If the file is not found, use an empty dictionary.
+

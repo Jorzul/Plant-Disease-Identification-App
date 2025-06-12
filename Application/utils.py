@@ -26,7 +26,7 @@ def process_and_predict(image_file, model, data_category, img_width, img_height)
 
     # Predict
     predictions = model.predict(img_batched)
-    scores = tf.nn.softmax(predictions[0])
+    scores = predictions[0]
 
     # --- Get Top Prediction ---
     top_prediction_index = np.argmax(scores)
