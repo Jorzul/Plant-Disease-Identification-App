@@ -12,5 +12,12 @@
         "Confidence": "6.68%",
         "Satisfied": "Yes",
         "Comment": "GG very nice app!"
+    },
+    "Mihai": {
+        "Date": "2025-06-14 20:37:53",
+        "Predicted_Class": "Apple Black Rot",
+        "Confidence": "99.99%",
+        "Satisfied": "Yes",
+        "Comment": "I don't have any comments, good app!"
     }
 }

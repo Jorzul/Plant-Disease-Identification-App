@@ -38,21 +38,21 @@ st.markdown("""
                 align-items: center;
             }
             .st-emotion-cache-ktz07o {
-                background-color: #4CAF50; /* Green background */
-                color: #d6f7d4; /* White text */
-                font-size: 20px; /* Larger font size */
+                background-color: #4CAF50;
+                color: #d6f7d4;
+                font-size: 20px;
                 font-weight: bold;
-                padding: 10px 24px; /* Larger padding */
-                border-radius: 8px; /* Rounded corners */
-                width: 100%; /* Make buttons fill the column width */
-                border: none; /* Remove default border */
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add a subtle shadow */
-                transition: 0.3s; /* Smooth transition for hover effect */
+                padding: 10px 24px;
+                border-radius: 8px;
+                width: 100%;
+                border: none;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
             }
             .st-emotion-cache-ktz07o:hover {
-                background-color: green; /* Darker green on hover */
+                background-color: green;
                 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-                color: #8afa83 /* Larger shadow on hover */
+                color: #8afa83;
             }
     </style>""", unsafe_allow_html=True)
 st.markdown('<div class="title">LeafSnap</div>', unsafe_allow_html=True)

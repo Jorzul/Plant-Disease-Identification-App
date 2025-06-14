@@ -11,14 +11,14 @@ def render_main_screen(set_active_tab_callback): # Added callback argument
     <style>
         /* General body styling */
         .stApp {
-            background-color: #111827; /* Dark Blue-Gray */
+            background-color: #111827;
         }
 
         /* Hero section styling */
         .hero-section {
             padding: 2rem 1rem;
             text-align: center;
-            background-color: #1F2937; /* Darker Blue-Gray */
+            background-color: #1F2937;
             border-radius: 0.5rem;
             margin-bottom: 2rem;
         }
@@ -26,21 +26,21 @@ def render_main_screen(set_active_tab_callback): # Added callback argument
             font-size: 2.5rem;
             text-align: center;
             font-weight: 800;
-            color: #F9FAFB; /* Off-White */
+            color: #F9FAFB;
         }
         .hero-title .highlight {
-            color: #22c55e; /* Bright Green */
+            color: #22c55e;
         }
         .hero-subtitle {
             font-size: 1.125rem;
-            color: #9CA3AF; /* Light Gray */
+            color: #9CA3AF;
             max-width: 600px;
             margin: 1rem auto 0;
         }
 
         /* Section styling */
         .section {
-            background-color: #1F2937; /* Darker Blue-Gray */
+            background-color: #1F2937;
             padding: 2rem 1.5rem;
             border-radius: 0.5rem;
             margin-bottom: 2rem;
@@ -52,18 +52,18 @@ def render_main_screen(set_active_tab_callback): # Added callback argument
         .section-title {
             font-size: 1.875rem;
             font-weight: 800;
-            color: #FFFFFF; /* White */
+            color: #FFFFFF; 
         }
         .section-subtitle {
             font-size: 1rem;
             font-weight: 600;
             text-transform: uppercase;
-            color: #22c55e; /* Bright Green */
+            color: #22c55e;
         }
         
         /* General paragraph text color within sections */
         .section p {
-            color: #D1D5DB; /* Light Gray */
+            color: #D1D5DB;
         }
 
         /* "How It Works" step styling */
@@ -87,16 +87,16 @@ def render_main_screen(set_active_tab_callback): # Added callback argument
         .step-title {
             font-size: 1.125rem;
             font-weight: 600;
-            color: #F9FAFB; /* Off-White */
+            color: #F9FAFB; 
             margin-bottom: 0.5rem;
         }
         .step-description {
-            color: #9CA3AF; /* Light Gray */
+            color: #9CA3AF; 
         }
         
         /* Feature card styling */
         .feature-card {
-            background-color: #374151; /* Gray */
+            background-color: #374151; 
             padding: 1.5rem;
             border-radius: 0.5rem;
             text-align: center;
