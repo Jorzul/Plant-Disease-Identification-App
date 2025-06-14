@@ -51,7 +51,7 @@ def email_exists(email):
     return email in users
 
 def load_feedback():
-    """Loads users from the JSON file."""
+    """Loads user feedbacks from the JSON file."""
     if FEEDBACK_DATA_FILE.exists():
         with open(FEEDBACK_DATA_FILE, 'r') as f:
             return json.load(f)
