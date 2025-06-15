@@ -6,7 +6,7 @@ from pathlib import Path
 # The keys are the names that will be displayed to the user.
 # The values are the file paths to the corresponding .keras models.
 MODEL_PATHS = {
-    "LeafSnap": 'C:/Users/User/FruitsCCNs/models/PlantsLeaves_classify_2.keras',
+    "LeafScan": 'C:/Users/User/FruitsCCNs/models/PlantsLeaves_classify_2.keras',
     "MobileNetV2": 'C:/Users/User/OneDrive/Documents/GitHub/Plant-Disease-Identification-App/models/PlantsLeaves_classify_MobileNetV2.keras',
     "EfficientNetV2": 'C:/Users/User/OneDrive/Documents/GitHub/Plant-Disease-Identification-App/models/PlantsLeaves_classify_EfficientNetV2.keras'
 }
