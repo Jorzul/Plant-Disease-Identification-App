@@ -10,7 +10,7 @@ import random
 import main_screen
 
 # --- App Layout ---
-st.set_page_config(page_title="LeafSnap", layout="centered")
+st.set_page_config(page_title="LeafScan", layout="centered")
 
 # --- User Authentication ---
 if 'logged_in' not in st.session_state:
@@ -55,7 +55,7 @@ st.markdown("""
                 color: #8afa83;
             }
     </style>""", unsafe_allow_html=True)
-st.markdown('<div class="title">LeafSnap</div>', unsafe_allow_html=True)
+st.markdown('<div class="title">LeafScan</div>', unsafe_allow_html=True)
 
 # Function to change page
 def set_active_page(page_name):
@@ -130,7 +130,7 @@ if not st.session_state.logged_in:
 if st.session_state.logged_in:
     # --- Sidebar ---
     st.sidebar.header(f"Welcome, {st.session_state.user_name}!")
-    st.sidebar.text('Thanks for using LeafSnap!')
+    st.sidebar.text('Thanks for using LeafScan!')
 
     # --- Model Selection ---
     st.sidebar.subheader("Select Model")
