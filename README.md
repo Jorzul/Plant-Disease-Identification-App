@@ -14,3 +14,9 @@ This App is used to identify Plants Diseases from pictures of leaves.
    ```
    streamlit run Application/app.py
    ```
+
+5. In order to run the tests, you have to make sure you are in the 'Application' directory, then run the command:
+
+   ```
+   python -m unittest
+   ```
